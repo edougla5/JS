@@ -1,0 +1,95 @@
+#navBar {
+    list-style: none;
+    background-color: black;
+    color: white;
+}
+
+#navbar li {
+    display: inline-block;
+    padding:0;
+}
+
+#nav a {
+    text-align: center;
+    display: inline-block;
+}
+
+#clock{
+    display: block;
+    margin: 0 auto;
+    border: solid black;
+    height: 200px;
+    width: 200px;
+    background-color: rgba(163, 70, 54, 0.678);
+    border-radius: 50%;
+    border-width: thin;
+}
+
+#hourHand {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    background-color: white;
+    margin: 100px;
+    transform-origin: left;
+    transform: rotate(200deg);
+}
+
+#minuteHand {
+    display: block;
+    height: 90px;
+    width: 2px;
+    background-color: black;
+    margin: 100px;
+    transform-origin: top;
+    transform: rotate(0deg);
+}
+
+#myButton {
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+#time-label {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+#atlLabel {
+    display: block;
+    text-align: center;
+}
+
+#tokyoLabel {
+    text-align: center;
+    display: none;
+}
+
+#anchorageLabel {
+    text-align: center;
+    display: none;
+}
+
+#hongKongLabel {
+    text-align: center;
+    display: none;
+}
+
+body {
+    color: #fff;
+  background: repeating-linear-gradient(45deg, #333333 0, #333333 5%, #4f4f4f 0, #4f4f4f 50%) 0 / 10px 10px;
+}
+
+#labelDigital {
+    text-align: center;
+}
+
+#hoursId {
+    text-align: center;
+}
+
+#minutesId {
+    text-align: center;
+}
