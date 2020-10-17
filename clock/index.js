@@ -3,37 +3,28 @@
 //declaring new date object with 2 variables hours and minutes
 //base clock that changes degree of hands based on different timezones
 
-let currentTime = new Date()
 
 let hourChange = document.getElementById('hourHand')
 let minuteChange = document.getElementById('minuteHand')
 
-let extraHours = -90
-let extraMinutes = -180
+let timeDiff = 0
 
-let hours = currentTime.getHours() * 30
-if(hours>12)
-hours-=12
-hours*=30
-
-let minutes = currentTime.getMinutes() * 6
-
-hourChange.style.transform = 'rotate(' + hours + 'deg)'
-minuteChange.style.transform = 'rotate(' + minutes + 'deg)'
-
-document.getElementById('hoursId').innerHTML = hours  / 6
-document.getElementById('minutesId').innerHTML = minutes / 30
 
 // reseting hours and minutes every second
 // setInterval function uses miliseconds
 setInterval (function() {
-    hours = currentTime.getHours()
-    minutes = currentTime.getMinutes()
+
+    let currentTime = new Date()
+    let hours = currentTime.getHours()
+    let minutes = currentTime.getMinutes()
+    let seconds = currentTime.getSeconds()
 
     if(hours>12)
     hours-=12
-    document.getElementById('hoursId').innerHTML = hours
-    document.getElementById('minutesId').innerHTML = minutes
+
+    document.getElementById('hours').innerHTML = hours + timeDiff
+    document.getElementById('minutes').innerHTML = minutes
+    document.getElementById('seconds').innerHTML = seconds
 
     minutes*=6
     hours*=30
@@ -41,12 +32,10 @@ setInterval (function() {
     hours-=90
     minutes-=180
 
-    hours+=extraHours
-    minute+=extraMinutes
+    hours = hours +(timeDiff*30)
 
     hourChange.style.transform = 'rotate(' + hours + 'deg)'
     minuteChange.style.transform = 'rotate(' + minutes + 'deg)'
-    
 
 }, 1000)
 
@@ -60,28 +49,49 @@ function searchAtl() {
     let anchorage = document.getElementById('anchorageLabel')
     let hongKong = document.getElementById('hongKongLabel')
     
-    if(searching == 'atl') {
-        extraHours = 0
-        extraMinutes = 0
+    if(searching == 'atlanta') {
         atl.style.display = 'block'
         anchorage.style.display = 'none'
         hongKong.style.display = 'none'
         tokyo.style.display = 'none'
     } else if(searching == 'tokyo') {
-        extraHours = 100
-        extraMinutes = 100
+        timeDiff = 1
         atl.style.display = 'none'
         anchorage.style.display = 'none'
         hongKong.style.display = 'none'
         tokyo.style.display = 'block'
     } else if(searching == 'anchorage') {
+        timeDiff = 4
         atl.style.display = 'none'
         anchorage.style.display = 'block'
         hongKong.style.display = 'none'
         tokyo.style.display = 'none'
     } else if(searching == 'hong kong')  {
-        extraHours = 200
-        extraMinutes = 300
+        timeDiff = 0
+        atl.style.display = 'none'
+        anchorage.style.display = 'none'
+        hongKong.style.display = 'block'
+        tokyo.style.display = 'none'
+    } else if(searching == 'paris')  {
+        timeDiff = 0
+        atl.style.display = 'none'
+        anchorage.style.display = 'none'
+        hongKong.style.display = 'block'
+        tokyo.style.display = 'none'
+    } else if(searching == 'sydney')  {
+        timeDiff = 0
+        atl.style.display = 'none'
+        anchorage.style.display = 'none'
+        hongKong.style.display = 'block'
+        tokyo.style.display = 'none'
+    } else if(searching == 'moscow')  {
+        timeDiff = 0
+        atl.style.display = 'none'
+        anchorage.style.display = 'none'
+        hongKong.style.display = 'block'
+        tokyo.style.display = 'none'
+    } else if(searching == 'mumbai')  {
+        timeDiff = 0
         atl.style.display = 'none'
         anchorage.style.display = 'none'
         hongKong.style.display = 'block'

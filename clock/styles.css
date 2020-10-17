@@ -80,14 +80,17 @@ body {
   background: repeating-linear-gradient(45deg, #333333 0, #333333 5%, #4f4f4f 0, #4f4f4f 50%) 0 / 10px 10px;
 }
 
-#labelDigital {
+#hoursLabel {
+    display: inline;
     text-align: center;
 }
 
-#hoursId {
+#minutesLabel {
+    display: inline;
     text-align: center;
 }
 
-#minutesId {
+#secondsLabel {
+    display: inline;
     text-align: center;
 }
