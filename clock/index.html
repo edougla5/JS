@@ -5,9 +5,16 @@
     <link rel = 'stylesheet' href = 'styles.css'>
 </head>
 <body>
-    <nav>
-        <ul id = 'navBar'>
-            <li><a>world timezones clock</a></li>
+    <nav id ='navbar'>
+        <ul>
+            <li id = 'atlanta' onclick = 'atlantaTime()'><a>atlanta</a></li>
+            <li id = 'tokyo' onclick = 'hongKongTime()'><a>tokyo</a></li>
+            <li id = 'anchorage' onclick = 'anchorageTime()'><a>anchorage</a></li>
+            <li id = 'hong-kong' onclick = 'hongKongTime()'><a>hong kong</a></li>
+            <li id = 'paris' onclick = 'parisTime()'><a>paris</a></li>
+            <li id = 'sydney' onclick = 'sydneyTime()'><a>sydney</a></li>
+            <li id = 'moscow' onclick = 'moscowTime()'><a>moscow</a></li>
+            <li id = 'mumbai' onclick = 'mumbaiTime()'><a>mumbai</a></li>
         </ul>
     </nav>
 
@@ -19,6 +26,10 @@
     <h3 id ='tokyoLabel'>tokyo</h3>
     <h3 id='anchorageLabel'>anchorage</h3>
     <h3 id='hongKongLabel'>hong kong</h3>
+    <h3 id='parisLabel'>paris</h3>
+    <h3 id='sydneyLabel'>sydney</h3>
+    <h3 id='moscowLabel'>moscow</h3>
+    <h3 id='mumbaiLabel'>mumbai</h3>
 
     <div id = 'clock'>
         <div id = 'twelve'></div>
@@ -27,20 +38,21 @@
         </div>
     </div>
 
-    <div id = 'hoursLabel'>
-        <h3>hours</h3>
-        <p id = 'hours'>hours</p>
-    </div>
-
-    <ul id = 'minutesLabel'>
-        <li>minutes:</li>
-        <p id = 'minutes'>minutes</p>
-    </ul>
-
-    <div id = 'secondsLabel'>
-        <h3>seconds</h3>
-        <p id = 'seconds'>seconds</p>
-    </div>
+        <div id='timeLabel'>
+            <ul>
+                <li>hours:</li>
+                <li id='hours'>hours</li>
+            </ul>
+            <ul>
+                <li>minutes:</li>
+                <li id='minutes'>minutes</li>
+            </ul>
+            <ul>
+                <li>seconds:</li>
+                <li id='seconds'>seconds</li>
+            </ul>
+        </div>
+        
 
     <script src="index.js"></script>
 </body>

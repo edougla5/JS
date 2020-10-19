@@ -1,17 +1,23 @@
-#navBar {
+#navbar {
     list-style: none;
     background-color: black;
     color: white;
+    text-align: center;
 }
 
 #navbar li {
+    margin: 0 60px 0 60px;
     display: inline-block;
-    padding:0;
+    cursor: pointer;
 }
 
 #nav a {
-    text-align: center;
     display: inline-block;
+}
+
+#searchBar {
+    margin-left: 200px;
+    text-align: center;
 }
 
 #clock{
@@ -75,22 +81,37 @@
     display: none;
 }
 
+#parisLabel {
+    text-align: center;
+    display: none;
+}
+
+#moscowLabel {
+    text-align: center;
+    display: none;
+}
+
+#sydneyLabel {
+    text-align: center;
+    display: none;
+}
+
+#mumbaiLabel {
+    text-align: center;
+    display: none;
+}
+
 body {
     color: #fff;
   background: repeating-linear-gradient(45deg, #333333 0, #333333 5%, #4f4f4f 0, #4f4f4f 50%) 0 / 10px 10px;
 }
 
-#hoursLabel {
+#timeLabel {
     display: inline;
     text-align: center;
 }
 
-#minutesLabel {
-    display: inline;
-    text-align: center;
-}
-
-#secondsLabel {
-    display: inline;
-    text-align: center;
+#timeLabel li {
+    display: inline-block;
+    padding-right: 20px;;
 }
