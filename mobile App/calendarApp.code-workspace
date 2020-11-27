@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../../pwa"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "pwa",
+		"liveServer.settings.port": 5501
+	}
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"></link>
+  </head>
+  <body>
+    
+    <h3 id = 'month'>January</h3>
+    
+    <img id = 'forwardArrow' src = '/pics/forward arrow.png' width = '40px' onclick = 'forwardMonth()'>
+    <img id = 'backwardArrow' src = '/pics/forward arrow.png' width = '40px' onclick = 'backMonth()'>
+    <h3 id='year'>2020</h3>
+
+      <div class='boxes'>
+      <div class='box' onclick='checkDate(0)'>
+        <ul>
+          <li>1</li>
+        </ul>
+      </div>
+      <div class='box' onclick='checkDate(1)'>
+        <ul>
+          <li>2</li>
+        </ul>
+      </div>
+      <div class='box'>
+        <ul>
+          <li>3</li>
+        </ul>
+      </div>
+      <div class='box'>
+        <ul>
+          <li>4</li>
+        </ul>
+      </div>
+      <div class='box'>
+        <ul>
+          <li>5</li>
+        </ul>
+      </div>
+      <div class='box'>
+        <ul>
+          <li>6</li>
+        </ul>
+      </div>
+      <div class='box'>
+        <ul>
+          <li>7</li>
+        </ul>
+      </div>
+      <div class='box'>
+        <ul>
+          <li>8</li>
+        </ul>
+      </div>
+      <div class='box'>
+        <ul>
+          <li>9</li>
+        </ul>
+      </div>
+      <div class='box'>
+        <ul>
+          <li>10</li>
+        </ul>
+      </div>
+      <div class='box'>
+        <ul>
+          <li>11</li>
+        </ul>
+      </div>
+      <div class='box'>
+        <ul>
+          <li>12</li>    
+  </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>13</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>14</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>15</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>16</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>17</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>18</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>19</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>20</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>21</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>22</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>23</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>24</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>25</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>26</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>27</li>
+    </ul>
+  </div>
+  <div class='box'>
+    <ul>
+      <li>28</li>
+    </ul>
+  </div>
+  <div id='box29' onclick = 'checkDate(29)'>
+    <ul>
+      <li>29</li>
+    </ul>
+  </div>
+  <div id='box30' onclick = 'checkDate(30)'>
+    <ul>
+      <li>30</li>
+    </ul>
+  </div>
+<div id = 'box31' onclick = 'checkDate(31)'>
+  <ul>
+    <li>31</li>
+    </div>
+  </ul>
+</div>
+
+
+<div id = 'eventsBox'>
+  <h3 id = 'title'></h3>
+  <h3 id = 'noEvents'>no events today</h3>
+    <h3 id = 'event1'></h3> 
+     <h3 id = 'event2'></h3>
+     <h3 id = 'event3'></h3>
+</div>
+
+<button id = 'addEvent' onclick = 'addEvent()'>Add Event</button>
+<br>
+<br>
+<br>
+<button id = 'removeEvent'>Remove<br> Event</button>
+
+    <script src='index.js'></script>
+</body>
+</html>
