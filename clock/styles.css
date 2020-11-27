@@ -115,3 +115,9 @@ body {
     display: inline-block;
     padding-right: 20px;;
 }
+
+@media (max-width: 800px){
+    #navbar li {
+        margin: 10px;
+    }
+}
