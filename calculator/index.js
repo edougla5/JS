@@ -1,28 +1,68 @@
 let plus = false
-let minus = false
-let multiply = false
+let mult = false
 let divide = false
-let subtract = false
+let sub = false
 let equals = false
 let ac = false
 
 let screen = document.getElementById('innerText')
 let acButton = document.getElementById('ac')
 let numTot = 0
+let numbers=false
 
-function operator(a) {
-    if(a=='plus')
-    plus=true
-}
-
-function myFunc(h) {
-    screen.innerHTML = h
-    if(plus==true) {
-        numTot+=h
+function myFunc(a) {
+    if(plus) {
+        screen.innerText+=a
+        numTot += a
+        plus=false
+    } else if(sub) {
+        screen.innerText+=a
+        numTot -= a
+        minus=false
+    } else if(divide) {
+        screen.innerText+=a
+        numTot /= a
+        divide = false
+    } else if(mult) {
+        screen.innerText+=a
+        numTot *= a
+        mult = false
+    } else if(screen.innerText='0') {
+        numTot=a
+        screen.innerText=a
+    } else {
+        numTot=a
     }
-    screen.value=numTot
 }
 
+function opp(a) {
+    if(a=='+') {
+        plus=true
+        screen.innerText+='+'
+    }
+    else if(a=='/') {
+        screen.innerText+='/'
+        divide=true
+    }
+    else if(a=='-') {
+        screen.innerText+='-'
+        sub=true
+    }
+    else if(a=='*') {
+        screen.innerText+='*'
+        mult=true
+    }
+    else if(a==0) {
+        numTot = 0
+        screen.innerText=numTot
+    }
+    else if(a=='=') {
+        screen.innerText=numTot
+    }
+}
+
+//set the numbers at one function and operators as another
+//place numbers and operators on the screen on screen
 /*
 let numTot = 1
 function operator(value) {
