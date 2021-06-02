@@ -18,7 +18,7 @@ function myFunc(a) {
     } else if(sub) {
         screen.innerText+=a
         numTot -= a
-        minus=false
+        sub=false
     } else if(divide) {
         screen.innerText+=a
         numTot /= a
